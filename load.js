@@ -2,6 +2,13 @@ var fileList = Array();
 
 $(document).ready(() => {
 
+    var head = document.getElementsByTagName("head")[0];
+    var style = document.createElement("link");
+    style.rel = "stylesheet";
+    style.type = "text/css";
+    style.href = "/style.css";
+    head.appendChild(style);
+
     var dir = folder; // photo location
     var fileextensions = [".jpg", ".JPG", ".png", ".PNG", ".jpeg", ".JPEG"]
     $.ajax({
