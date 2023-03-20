@@ -10,20 +10,25 @@ $(document).ready(() => {
     head.appendChild(style);
 
     var dir = folder; // photo location
-    var fileextensions = [".jpg", ".JPG", ".png", ".PNG", ".jpeg", ".JPEG"]
+    var fileextensions = [".jpg", ".JPG", ".png", ".PNG", ".jpeg", ".JPEG"];
     $.ajax({
         //This will retrieve the contents of the folder if the folder is configured as 'browsable'
         url: dir,
         success: function (data) {
             //List all .png file names in the page
             // });
+            console.log("success");
             fileextensions.forEach((fileextension) =>{
                 $(data).find("a:contains(" + fileextension + ")").each(function () {
                     var filename = this.href.replace(window.location.host, "").replace("http://", "");
-                    // console.log(filename)
-                    fileList.push(filename)
+                    // console.log(filename);
+                    fileList.push(filename);
                 });
             })
+        },
+        error: function(xhr, txt, err){
+            console.log("error");
+            console.log(xhr.statusText);
         }
     });
 })
