@@ -1,0 +1,354 @@
+/* Global variables */
+:root {
+    --link: rgb(180, 119, 40);
+    --link-light: rgb(187, 149, 99);
+    --link-shadow: rgb(238, 232, 225);
+
+    --credit: rgb(91, 73, 52);
+    --dropdown: #f9f9f9;
+    --dropdown-shaded: #ffffff;
+
+}
+
+/* Document styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: none;
+    text-emphasis-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+html,
+body {
+    /* padding: 10px; */
+    color: black;
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    z-index: 100;
+}
+
+/* Navbar styles */
+
+#navbar,
+#navbar.dropdown,
+#navbar.dropbtn,
+#navbar button {
+    font-size: 1.5vmax !important;
+}
+
+#navbar {
+    border-bottom: 1.5px solid black;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    background-color: white;
+}
+
+#navbar>div {
+    z-index: 100;
+}
+
+#navbar a {
+    float: left;
+    z-index: 300;
+    position: relative;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+
+    /* Important for vertical align on mobile phones */
+    /* margin: 0; */
+    /* Important for vertical align on mobile phones */
+}
+
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    color: var(--link);
+    /* color: rgb(180, 119, 40); */
+
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+
+    position: absolute;
+    background-color: var(--dropdown);   
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    z-index: 150;
+
+}
+    /* font-size: medium !important; */
+
+/* Links inside the dropdown */
+.dropdown-content a, .list-name{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: inherit;
+    z-index: 200;
+}
+
+.list-name{
+    /* background-color: var(--link-light); */
+    font-weight: lighter;
+    padding-left: 6px;
+    background-color: var(--dropdown-shaded);
+    border-bottom: 1px solid black;
+    /* border-top: 1px solid black; */
+    /* border: 1px solid black; */
+}
+
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--link-shadow);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+}
+
+.site-links {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.site-links>a {
+    font-size: 1.2vmax !important;
+    font-weight: lighter;
+    
+}
+
+.site-links>a:hover,
+a:hover {
+    color: var(--link);
+}
+
+* {
+    font-family:'Segoe UI';
+}
+
+#main-title a{
+    font-weight: 300;
+    font-size: 4vmax !important;
+}
+
+.side-bar h1 {
+    font-size: 3vmax !important;
+}
+
+#navbar>div {
+    /* border: 2px solid green; */
+}
+
+/* Content styles */
+
+.container {
+    padding: 10px;
+    margin-top: 10vh;
+    z-index: -1;
+    display: flex;
+    /* flex: 2 1 auto; */
+    /* overflow: hidden; */
+    height: 90vh;
+}
+
+/* Side bar */
+.side-bar {
+    display: flex;
+    min-width: 20vw;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px 50px 30px;
+}
+
+.side-bar h1, h2, h3, h4, i{
+    font-weight: lighter;
+}
+
+.side-bar a {
+    color: var(--link);
+}
+
+/* Images */
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: 999;
+    padding: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(77, 77, 77);
+}
+
+
+#image-list li {
+    list-style: none;
+}
+
+#image-list {
+    padding: 5% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+
+    flex-wrap: wrap;
+    gap: 10px 100px;
+}
+
+img {
+    max-height: 80vh;
+
+    /* opacity: 85%; */
+}
+
+@media (orientation:landscape) {
+    
+    #image-list{
+        overflow-y: scroll;
+    }
+
+    .side-bar h2{
+        font-size: 2vmax;
+    }
+
+    .side-bar h3{
+        font-size: 1.3vmax;
+    }
+
+    .side-bar p{
+        font-size: 1.15vmax;
+    }
+
+  
+    .about{
+        overflow-y: hidden !important;
+    }
+
+
+}
+
+@media (orientation:portrait) {
+    img {
+        max-width: 70vw;
+    }
+
+    .side-bar {
+        padding: 0;
+        z-index: -5;
+    }
+
+    .container{
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .side-bar h1{
+        font-size: 8.5vmin !important;
+    }
+    .side-bar h2{
+        font-size: 5vmin;
+    }
+ 
+    .side-bar h3{
+        font-size: 4vmin;
+    }
+
+    .side-bar p{
+        font-size: 3vmin;
+    }
+
+    #image-list{
+        width: 100%;
+    }
+
+    .about li {
+        padding: 0 !important;
+        min-width: 100% !important;
+    }
+
+    .about{
+        min-height: max-content !important;
+        overflow: visible !important;
+    }
+
+    .about img{
+        min-width: 100% !important;
+        /* max-height: 50vh; */
+        /* max-height: 40vh; */
+        bottom: 0;
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+    
+
+    .main{
+        min-height: 80%;
+    }
+
+    #navbar a {
+        float: right !important;
+    }
+}
+
+img:hover {
+    opacity: 100%;
+}
+
+
+.about img{
+    /* transform: rotate(90deg + 90deg); */
+    /* transform: rotate(180deg); */
+}
+
+#about-me{
+    /* justify-content: flex-start; */
+    /* text-align: right !important; */
+    /* text-justify; */
+}
+
+.main{
+    min-width: 100% !important;
+    justify-content: center;
+    text-align: center;
+}

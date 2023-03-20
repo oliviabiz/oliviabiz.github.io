@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <div id="head"></div>
+    <script>
+        $(function () {
+            $("#head").load("/head.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+        </div>
+
+        <script>
+            $(function () {
+                $("#navbar").load("/navbar.html");
+            });
+        </script>
+    </header>
+
+    <div class="container">
+        <div class="side-bar">
+        <h1>regards noirs</h1>
+        <h3>à l'espace risée</h3>
+        <p>
+            <!-- soirée cinema: femmes noires et l'horreur noire -->
+            initiative indépendante pour le  <a href="https://instagram.com/regards.noirs" target="_blank">cinéma noir à montréal </a> 
+        </p>
+
+        </div>
+        <ul id="image-list">
+        </ul>
+    </div>
+</body>
+<script>
+    var folder = "/PHOTOS/Regards Noirs";
+</script>
+<script src="/load.js"></script>
+
+</html>

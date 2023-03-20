@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <div id="head"></div>
+    <script>
+        $(function () {
+            $("#head").load("/head.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+        </div>
+
+        <script>
+            $(function () {
+                $("#navbar").load("/navbar.html");
+            });
+        </script>
+    </header>
+
+    <div class="container">
+        <ul id="image-list" class="about"></ul>
+        <div class="side-bar">
+        <h1>biz</h1>
+
+        <br>
+        <div id="about-me">
+            <h3>
+                artist, scientist, lover
+                <br>
+                based in montréal (en/fr)
+                <br>
+                <br>
+                shooting film since 2016
+                <br>
+                available for portraits, events, etc.
+                <br>
+                <br>
+                get in <a href="/pages/sites/contact.html">touch</a>!
+            </h3>
+        </div>
+
+          <br>
+          <br>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    var folder = "/PHOTOS/me";
+</script>
+<script src="/load.js"></script>
+
+</html>

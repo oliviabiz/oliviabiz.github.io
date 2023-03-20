@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <div id="head"></div>
+    <script>
+        $(function () {
+            $("#head").load("/head.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+        </div>
+
+        <script>
+            $(function () {
+                $("#navbar").load("/navbar.html");
+            });
+        </script>
+    </header>
+
+    <div class="container">
+        <div class="side-bar">
+            <h1>eyes like love</h1>
+            <h2>2022</h2>
+            <h3>directed by olivia biz
+            </h3>
+            <br>
+            <br>
+            <p>When does it feel good to be seen?</p>
+            <br>
+            <p>
+                This <a href="https://youtu.be/5Ghd7d7j238" target="_blank">short film</a> explores what it means and feels like to be seen with love, both in visual form and through spoken narrative. On screen, dreamlike visuals follow two lovers as they share space with one another, highlighting the gaze that connects them. In parallel, interviewees reflect on their own relationships with perception, the gaze, and love. 
+            </p>
+            <br>
+            <p>An ode to queer romance: capturing tender moments of bliss and connectedness, this film encapsulates when it feels good to be seen, that is, with eyes like love.</p>
+            <br>
+            <!-- <p>watch <a href="https://youtu.be/5Ghd7d7j238" target="_blank">here</a></p> -->
+        </div>
+        <ul id="image-list">
+        </ul>
+    </div>
+</body>
+<script>
+    var folder = "/PHOTOS/Eyes like love";
+</script>
+<script src="/load.js"></script>
+
+
+</html>

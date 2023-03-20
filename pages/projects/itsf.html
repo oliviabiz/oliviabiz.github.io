@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <div id="head"></div>
+    <script>
+        $(function () {
+            $("#head").load("/head.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+        </div>
+
+        <script>
+            $(function () {
+                $("#navbar").load("/navbar.html");
+            });
+        </script>
+    </header>
+
+    <div class="container">
+        <div class="side-bar">
+            <h1>if the shoe fits</h1>
+            <h2>2022</h2>
+            <h3>by 
+                <a href="https://www.instagram.com/tky_no_exp/" target="_blank">
+                    emem etti
+                </a>
+            </h3>
+            <h3>photos by <i>olivia biz</i></h3>
+
+
+            <!-- <p>
+                video | performance | installation
+            </p> -->
+            <q>
+                <cite>
+                    a grieving process and visual manifestation of hope for the future of Black joy
+                </cite>
+            </q>
+
+        </div>
+        <ul id="image-list">
+        </ul>
+    </div>
+</body>
+<script>
+    var folder = "/PHOTOS/ITSF";
+</script>
+<script src="/load.js"></script>
+
+</html>

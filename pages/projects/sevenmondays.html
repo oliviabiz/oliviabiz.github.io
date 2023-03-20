@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <div id="head"></div>
+    <script>
+        $(function () {
+            $("#head").load("/head.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+        </div>
+
+        <script>
+            $(function () {
+                $("#navbar").load("/navbar.html");
+            });
+        </script>
+    </header>
+    <div class="container">
+        <div class="side-bar">
+            <h1>seven mondays</h1>
+            <h2>2021</h2>
+            <h3>various authors</h3>
+            <h3>visualizer by <i>olivia biz</i></h3>
+            <p>virtual poetry reading:
+                watch <a href="https://youtu.be/8Di07IEeoKk" target="_blank">here </a></p>
+
+        </div>
+        <ul id="image-list">
+        </ul>
+    </div>
+</body>
+<script>
+    var folder = "/PHOTOS/7 Mondays";
+</script>
+<script src="/load.js"></script>
+
+</html>

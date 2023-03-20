@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <div id="head"></div>
+    <script>
+        $(function () {
+            $("#head").load("/head.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+        </div>
+
+        <script>
+            $(function () {
+                $("#navbar").load("/navbar.html");
+            });
+        </script>
+    </header>
+
+    <div class="container">
+        <div class="side-bar">
+            <h1>hannah</h1>
+            <h2>2020</h2>
+            <p>at the swamp</p>
+
+        </div>
+        <ul id="image-list">
+        </ul>
+    </div>
+</body>
+<script>
+    var folder = "/PHOTOS/Hannah";
+</script>
+<script src="/load.js"></script>
+
+</html>
