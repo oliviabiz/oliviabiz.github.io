@@ -1,6 +1,15 @@
+/** ONLINE solution */
 var fileList = Array();
 
-$(document).ready(() => {
+(async () => {
+    addr = "https://api.github.com/repos/oliviabiz/oliviabiz.github.io/contents/"
+    addr = addr + folder;
+    console.log("fetching from : " + addr)
+    const response = await fetch(addr)
+    const data = await response.json()
+    for (let file of data) {
+        fileList.push("/" + file.path);
+    }
 
     var head = document.getElementsByTagName("head")[0];
     var style = document.createElement("link");
@@ -9,32 +18,7 @@ $(document).ready(() => {
     style.href = "/style.css";
     head.appendChild(style);
 
-    var dir = folder; // photo location
-    var fileextensions = [".jpg", ".JPG", ".png", ".PNG", ".jpeg", ".JPEG"];
-    $.ajax({
-        //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-        url: dir,
-        success: function (data) {
-            //List all .png file names in the page
-            // });
-            console.log("success");
-            fileextensions.forEach((fileextension) =>{
-                $(data).find("a:contains(" + fileextension + ")").each(function () {
-                    var filename = this.href.replace(window.location.host, "").replace("http://", "");
-                    // console.log(filename);
-                    fileList.push(filename);
-                });
-            })
-        },
-        error: function(xhr, txt, err){
-            console.log("error");
-            console.log(xhr.statusText);
-        }
-    });
-})
 
-// Waits until ajax call is finished
-$(document).ajaxStop(function () {
     console.log(fileList.length, 'items')
     // shuffle list
 
@@ -46,17 +30,12 @@ $(document).ajaxStop(function () {
     shuffleArray(fileList);
 
     // load images
-
-
     var image_list = document.querySelector("#image-list")
     imgCount = 0;
     fileList.forEach(file => {
-        // if (imgCount < 1){
             try {
                 var item = document.createElement('li');
-                // item.classList.add('display-image-container')
                 item.innerHTML = `<img src="${file}">`;
-                // console.log(`<img src=${file}>`);
                 image_list.appendChild(item);
                 imgCount = imgCount + 1;
             }
@@ -64,13 +43,5 @@ $(document).ajaxStop(function () {
                 console.log('Error loading', file)
                 return;
             }
-        // }
-        
-
     });
-
-    // console.log(image_list)
-
-});
-
-
+})();
