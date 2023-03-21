@@ -61,7 +61,8 @@ window.onload = function() {
         const container = document.querySelector(".container");
 
         const showNav = function() {
-            var content = this.children[1];
+            // var content = this.children[1];
+            var content = this.parentElement.children[1];
             content.classList.toggle("visibleDrop");
         
             if (content.classList.contains("visibleDrop")) {
@@ -81,9 +82,14 @@ window.onload = function() {
             }
         }
 
-        document.querySelectorAll(".dropdown").forEach( function(e) {
-            e.addEventListener("click", showNav);
-            e.addEventListener("touchstart", showNav);
+        // document.querySelectorAll(".dropdown").forEach( function(e) {
+        document.querySelectorAll(".dropbtn").forEach( function(e) {
+            var events = ['click', 'touchstart', 'touchend', 'touchmove']
+            events.forEach(function(event) {
+                e.addEventListener(event, showNav);
+            })
+            // e.addEventListener("click", showNav);
+            // e.addEventListener("touchstart", showNav);
         })
     }
 }
