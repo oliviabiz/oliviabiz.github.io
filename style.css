@@ -164,7 +164,7 @@ a:hover {
 }
 
 * {
-    font-family:'Segoe UI';
+    font-family:'Segoe UI', 'Roboto', sans-serif;
 }
 
 #main-title a{
