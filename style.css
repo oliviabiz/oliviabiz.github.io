@@ -48,9 +48,17 @@ header {
     font-size: 1.5vmax !important;
 }
 
+button, button:active, button:hover, button:visited{
+    color: black;
+}
+
+.visibleDrop {
+    display: flex !important;
+}
+
 #navbar {
-    border-bottom: 1.5px solid black;
     height: 10vh;
+    min-height: max-content !important;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -59,7 +67,6 @@ header {
     position: fixed;
     z-index: 100;
     top: 0;
-    background-color: white;
 }
 
 #navbar>div {
@@ -101,13 +108,13 @@ header {
 /* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
+    /* display: flex; */
 
     position: absolute;
     background-color: var(--dropdown);   
     min-width: 160px;
     /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 999;
-
 }
     /* font-size: medium !important; */
 
@@ -140,11 +147,10 @@ header {
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    /* display: block; */
-    display: flex;
+.dropdown-content {
     flex-direction: column;
 }
+
 
 .site-links {
     display: flex;
@@ -180,7 +186,7 @@ a:hover {
 #navbar>div {
     /* border: 2px solid green; */
 }
-
+ 
 /* Content styles */
 
 .container {
@@ -191,7 +197,7 @@ a:hover {
     top: 0;
     bottom: 0;
     width: 100%;
-    display: flex;
+    display: flex; 
     height: 90vh;
 }
 
@@ -268,6 +274,10 @@ img {
         overflow-y: hidden !important;
     }
 
+    .dropdown:hover .dropdown-content{
+        display: flex;
+    }
+
 
 }
 
@@ -331,6 +341,14 @@ img {
 
     #navbar a {
         float: right !important;
+    }
+
+
+    /* Fixing mobile menu navbar issue */
+    .dropdown-content{
+        /* max-height: 100px; */
+        min-height: fit-content;
+        overflow-y: scroll;
     }
 }
 
