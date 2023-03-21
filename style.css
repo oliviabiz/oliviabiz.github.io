@@ -20,7 +20,7 @@
 }
 
 a {
-    color: inherit;
+    color: black;
     text-decoration: none;
 }
 
@@ -136,7 +136,7 @@ header {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: var(--link-shadow);
+    background-color: var(--link-shadow) !;
 }
 
 /* Show the dropdown menu on hover */
@@ -206,7 +206,7 @@ a:hover {
 }
 
 .side-bar a {
-    color: var(--link);
+    color: var(--link) !important;
 }
 
 /* Images */
