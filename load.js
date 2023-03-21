@@ -63,7 +63,7 @@ if(window.innerHeight > window.innerWidth){
 
     window.onload = function() {
         document.querySelectorAll(".dropdown").forEach(e => 
-            e.onclick = function () {
+            e.addEventListener("click", function() {
                 var content = this.children[1];
                 content.classList.toggle("visibleDrop");
 
@@ -81,6 +81,6 @@ if(window.innerHeight > window.innerWidth){
                     container.style.setProperty("margin-top", "10vh", "important")
                 }
 
-            });
+            }));
     };
 }
