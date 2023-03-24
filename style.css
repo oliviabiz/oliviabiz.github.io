@@ -151,6 +151,9 @@ button, button:active, button:hover, button:visited{
     flex-direction: column;
 }
 
+.dropdown:hover .dropdown-content{
+    display: flex;
+}
 
 .site-links {
     display: flex;
@@ -272,10 +275,6 @@ img {
   
     .about{
         overflow-y: hidden !important;
-    }
-
-    .dropdown:hover .dropdown-content{
-        display: flex;
     }
 
 }

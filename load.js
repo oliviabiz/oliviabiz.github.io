@@ -54,6 +54,8 @@ else{
     console.log("desktop")
 }
 
+
+/*
 window.onload = function() {
     // Portrait mode only
     if(window.innerHeight > window.innerWidth){
@@ -93,4 +95,4 @@ window.onload = function() {
         })
     }
 }
-
+*/
