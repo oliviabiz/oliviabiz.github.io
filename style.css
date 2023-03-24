@@ -151,8 +151,10 @@ button, button:active, button:hover, button:visited{
     flex-direction: column;
 }
 
-.dropdown:hover .dropdown-content{
-    display: flex;
+@media (pointer: fine){    
+    .dropdown:hover .dropdown-content{
+        display: flex;
+    }
 }
 
 .site-links {
