@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <div id="head"></div>
+    <script>
+        $(function () {
+            $("#head").load("/head.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+        </div>
+
+        <script>
+            $(function () {
+                $("#navbar").load("/navbar.html");
+            });
+        </script>
+    </header>
+
+    <div class="container">
+        <div class="side-bar">
+            <h1>the love we have always deserved</h1>
+            <h2>2023</h2>
+            <h3>by olivia biz
+            </h3>
+            <br>
+            <i>
+                The room is a reminder to both the child looking up and the adult looking back, that we are and have always been worthy of this love, praise, and adoration.
+            </i>
+            <br>
+            <p>
+                The linear temporalities of queer and trans journeys are obscured in this exhibition, as we converse with the children still within us. Viewers are invited to step into the “bedroom”, take their shoes off, crawl onto the carpet and allow themselves to dream big. Across the walls are posters of the idols I would have needed to see growing up: portraits of real QTBIPOC adults proudly living out their dreams. The TV plays a recollection of these dreams: the ones we had as children and the ones we have now. 
+            </p>
+          
+        </div>
+        <ul id="image-list">
+        </ul>
+    </div>
+</body>
+<script>
+    var folder = "/PHOTOS/residency";
+</script>
+<script src="/load.js"></script>
+
+
+</html>
